@@ -19,7 +19,6 @@ Nota: para instalar un paquete se debe ejecutar el comando `install.packages('<n
 
 ## Lectura de archivos de audio
 
-
 ```{r load_sound}
 library(tuneR)
 s = readWave('./audio_ejemplo/pipra.wav')
@@ -31,8 +30,6 @@ print(s)
 ```
 
 ## La dimensión temporal y frecuencial de la señal
-
-You can also embed plots, for example:
 
 ```{r}
 library(seewave)

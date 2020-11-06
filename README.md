@@ -26,7 +26,6 @@ print(s)
 
 ## La dimensión temporal y frecuencial de la señal
 
-You can also embed plots, for example:
 
 ```{r}
 library(seewave)
@@ -35,7 +34,6 @@ timer(s, threshold = 25, msmooth = c(2048,0))
 ```
 
 ```{r}
-library(seewave)
 mspec = meanspec(s, wl = 512)
 fpeaks(mspec, threshold = 0.1)
 spectro(s, wl = 1024, ovlp = 0.5, collevels = seq(-60, 0, 5), osc=T)
