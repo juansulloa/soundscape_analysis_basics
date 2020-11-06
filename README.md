@@ -4,9 +4,40 @@ Este repositorio tiene información esencial para comenzar a manipular archivos 
 
 ## Dependencias
 
-Para ejecutar el código deberá contar con:
+Se debe tener instalado los siguientes paquetes:
 
-- R 3.5
-- librarías tuneR y seewave
+- tuneR
+- seewave
 
+Nota: para instalar un paquete se debe ejecutar el comando `install.packages('<nombre del paquete>')`.
+
+## Lectura de archivos de audio
+
+
+```{r load_sound}
+library(tuneR)
+s = readWave('./audio_ejemplo/pipra.wav')
+# acceder a los atributos del objeto
+s_attrib = attributes(s)  
+s_attrib$samp.rate
+# imprimir los atributos del objeto
+print(s)
+```
+
+## La dimensión temporal y frecuencial de la señal
+
+You can also embed plots, for example:
+
+```{r}
+library(seewave)
+oscillo(s)
+timer(s, threshold = 25, msmooth = c(2048,0))
+```
+
+```{r}
+library(seewave)
+mspec = meanspec(s, wl = 512)
+fpeaks(mspec, threshold = 0.1)
+spectro(s, wl = 1024, ovlp = 0.5, collevels = seq(-60, 0, 5), osc=T)
+```
 
