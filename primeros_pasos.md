@@ -3,6 +3,9 @@ Manipulación básica de archivos en de audio en R
 Juan Sebastián Ulloa
 11/3/2020
 
+Este repositorio tiene información esencial para comenzar a manipular
+archivos de audio usando R.
+
 ## Dependencias
 
 Se deben tener los siguientes paquetes instalados:
