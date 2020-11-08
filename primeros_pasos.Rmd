@@ -2,9 +2,7 @@
 title: "Manipulación básica de archivos en de audio en R"
 author: "Juan Sebastián Ulloa"
 date: "11/3/2020"
-output: 
-  html_document:
-      keep_md: true
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
