@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #' 
 ## ----load_sound----------------------------------------------------------
 library(tuneR)
-s = readWave('./audio_ejemplo/pipra.wav')
+s = readWave('./audio_ejemplo/spinetail.wav')
 # imprimir los atributos del objeto
 print(s)
 
@@ -36,7 +36,7 @@ print(s)
 #' Los metadatos son almacenados en el objeto como atributos. Es posible acceder a estos atributos usando la función `attributes` de R.
 #' 
 ## ----load_sound_2--------------------------------------------------------
-s_attrib = attributes(s)  
+s_attrib = attributes(s)
 s_attrib$samp.rate
 
 #' 
@@ -46,6 +46,7 @@ s_attrib$samp.rate
 #' 
 ## ----temporal_dim--------------------------------------------------------
 library(seewave)
+par(mfrow=c(1,1), mar=c(5.1, 4.1, 4.1, 2.1))
 oscillo(s)
 timer(s, threshold = 25, msmooth = c(2048,0))
 
